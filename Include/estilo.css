@@ -1,0 +1,25 @@
+#Principal h1{
+	text-align: center;
+	color:white;
+}
+#Principal p{
+	text-align: center;
+	font-size: 18px;
+	color:grey;
+}
+#Principal{
+	background-color: #001359;
+	padding: 0.5em;
+}
+
+#Imagenes p{
+	text-align: center;
+}
+
+#ejercicios{
+	text-align: center;
+}
+ul{
+	font-size: 20px;
+	margin:2em;
+}
