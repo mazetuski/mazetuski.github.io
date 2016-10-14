@@ -9,12 +9,23 @@ multiplosDeCinco();
 /**
  * Función que coge 7 numeros del usuario y comprueba si son multiplos de 5.
  */
-function multiplosDeCinco(){
+function multiplosDeCinco() {
     let mensaje = "Son múltiplos: ";
     for (let i = 1; i <= 7; i++) {
-        let numeroUsuario = prompt("Dame el " + i + "º número");
+        let numeroUsuario = comprobarNumeroEntero(i);
         if (numeroUsuario % 5 === 0)
             mensaje += " " + numeroUsuario;
     }
     console.log(mensaje);
+}
+
+/**
+ * Comprueba que sea un numero entero.
+ * @returns numeroEntero Devuelve el número.
+ */
+function comprobarNumeroEntero(indice) {
+    do {
+        var numeroEntero = prompt("Dame el " + indice + "º número");
+    } while (numeroEntero != parseInt(numeroEntero).toFixed());
+    return numeroEntero;
 }
