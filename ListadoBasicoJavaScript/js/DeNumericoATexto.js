@@ -14,7 +14,7 @@
     let comprobarNumeroEntero = function () {
         do {
             var numeroEntero = prompt("Introduce un número entero");
-        } while (numeroEntero != parseInt(numeroEntero).toFixed());
+        } while (numeroEntero != parseInt(numeroEntero).toFixed() || (numeroEntero<0 || numeroEntero>99));
         return parseInt(numeroEntero);
     }
 
@@ -25,6 +25,8 @@
      */
     let comprobarUnidades = function (numero) {
         switch (numero) {
+            case 0:
+                return "CERO";
             case 1:
                 return "UNO";
             case 2:
