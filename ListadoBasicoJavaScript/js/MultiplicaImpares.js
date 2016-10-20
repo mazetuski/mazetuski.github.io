@@ -5,6 +5,10 @@
  */
 
 {
+    /**
+     * Función que multiplica los primeros 20 impares
+     * @returns {string} Devuelve una cadena con el resultado.
+     */
     let multiplica20PrimeroImpares = function () {
         let sumaImpares = 0;
         let mensaje = "";
