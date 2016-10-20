@@ -105,6 +105,8 @@
                 return decenasMasY("OCHENTA", unidad);
             case 9:
                 return decenasMasY("NOVENTA", unidad);
+            default:
+                return comprobarUnidades(unidad);
         }
     }
 
