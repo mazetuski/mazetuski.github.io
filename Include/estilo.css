@@ -10,6 +10,7 @@
 #Principal{
 	background-color: #001359;
 	padding: 0.5em;
+	box-shadow: 4px 4px 7px grey;
 }
 
 #Imagenes p{

@@ -1,0 +1,17 @@
+#listadoBasico1{
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    width: 15%;
+}
+
+#ejercicios1-10{
+    width: 15%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+}
+
+section h3{
+    text-align: center;
+}
