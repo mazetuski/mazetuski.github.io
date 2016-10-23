@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miguel Ángel Zamora Blanco</title>
+    <script type="text/javascript">
+        let limitarCaracteres = function (numeroMax, elEvento) {
+            let elemento = document.getElementById("texto");
+            if (elemento.value.length >= numeroMax && !esCaracterEspecial(elEvento))
+                return false;
+            return true;
+        }
+
+        let esCaracterEspecial = function (elEvento) {
+            let evento = elEvento;
+            let codigoCaracter = evento.charCode || evento.keyCode;
+            let teclasEspeciales=[32, 37, 39, 46];
+            for (let i in teclasEspeciales)
+                if(codigoCaracter===teclasEspeciales[i])
+                    return true;
+            return false;
+        }
+    </script>
+</head>
+<body>
+<noscript>Tu navegador no soporta javascript</noscript>
+<textarea id="texto" onkeypress="return limitarCaracteres(5, event)"></textarea>
+</body>
+</html>
