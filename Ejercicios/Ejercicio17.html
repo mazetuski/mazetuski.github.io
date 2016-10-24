@@ -6,6 +6,7 @@
     <script type="text/javascript">
         let limitarCaracteres = function (numeroMax, elEvento) {
             let elemento = document.getElementById("texto");
+            comprobarCaracteresDisponibles(numeroMax, elemento);
             if (elemento.value.length >= numeroMax && !esCaracterEspecial(elEvento))
                 return false;
             return true;
@@ -20,10 +21,19 @@
                     return true;
             return false;
         }
+
+        let comprobarCaracteresDisponibles=function(numeroMax, elemento){
+            let caracteresDisponibles = numeroMax - elemento.value.length;
+            let texto=document.getElementById("caracteresDisponibles");
+            texto.value=caracteresDisponibles;
+
+        }
+
     </script>
 </head>
 <body>
 <noscript>Tu navegador no soporta javascript</noscript>
 <textarea id="texto" onkeypress="return limitarCaracteres(5, event)"></textarea>
+<input id="caracteresDisponibles" type="text" onkeypress="return false;">
 </body>
 </html>
