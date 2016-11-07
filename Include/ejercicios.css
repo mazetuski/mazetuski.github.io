@@ -16,10 +16,11 @@ section h3{
     text-align: center;
 }
 #array{
-    width: 15%;
+    width: 25%;
     display: inline-block;
     vertical-align: top;
     padding: 5px;
+    margin-left: 25px;
 }
 
 #ventanas{

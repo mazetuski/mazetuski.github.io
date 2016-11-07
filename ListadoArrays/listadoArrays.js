@@ -13,7 +13,7 @@
     console.log("\n1.- con forEach");
     let array = ["cero", "uno", "dos", "tres", "cuatro"];
     let muestraForEachConArgumentos = function (array) {
-        array.forEach(function (elem, index) {
+        array.forEach(function (elem, index, array) {
             console.log(index + " : " + elem);
         });
     }
