@@ -15,3 +15,16 @@
 section h3{
     text-align: center;
 }
+#array{
+    width: 15%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+}
+
+#ventanas{
+    width: 15%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+}
