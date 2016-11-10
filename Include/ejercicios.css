@@ -29,3 +29,10 @@ section h3{
     vertical-align: top;
     padding: 5px;
 }
+
+#listadoDate{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+}
