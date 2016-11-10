@@ -1,38 +1,37 @@
-#listadoBasico1{
+section{
+    width: 25%;
     display: inline-block;
     vertical-align: top;
-    padding: 5px;
-    width: 15%;
+    background:rgba(86, 168, 255, 0.7);
+    box-shadow: 1px 1px 10px black;
+    margin:20px 20px;
+    transition: all 1s;
+    transform: scale(1, 1);
 }
 
-#ejercicios1-10{
-    width: 15%;
-    display: inline-block;
-    vertical-align: top;
-    padding: 5px;
+section:hover{
+    background: #001359;
+    color: white;
+    transition: all 1s;
+    transform: scale(1.05, 1.05);
 }
+
 
 section h3{
     text-align: center;
 }
-#array{
-    width: 25%;
-    display: inline-block;
-    vertical-align: top;
-    padding: 5px;
-    margin-left: 25px;
+
+section ul{
+    list-style: none;
 }
 
-#ventanas{
-    width: 15%;
-    display: inline-block;
-    vertical-align: top;
-    padding: 5px;
+section a{
+    text-decoration: none;
+    color: #001359;
+    transition: color 1s;
 }
 
-#listadoDate{
-    width: 25%;
-    display: inline-block;
-    vertical-align: top;
-    padding: 5px;
+section:hover a{
+    color:white;
+    transition: color 1s;
 }
