@@ -1,0 +1,12 @@
+body{
+    height: 1300px;
+}
+
+main{
+    margin-top: 300px;
+}
+
+main input{
+    margin: 10px;
+    padding: 7px;
+}
