@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miguel Ángel Zamora Blanco</title>
+    <link rel="stylesheet" href="factura.css">
+    <script type="text/javascript" src="Factura.js"></script>
+</head>
+<body>
+<noscript>
+    <h3>Tu navegador no soporta JavaScript</h3>
+</noscript>
+<h1>Ejercicio 1: Factura</h1>
+<div id="formulario">
+
+    <h3>Cliente</h3>
+    Nombre:<input type="text" id="nombre"><br/>
+    Dirección:<input type="text" id="direccion"><br/>
+    Teléfono:<input type="number" id="telefono"><br/>
+
+    <h3>Elementos Factura</h3>
+    Descripción:<input type="text" id="descripcion"><br/>
+    Cantidad:<input type="number" id="cantidad"><br/>
+    Precio:<input type="number" id="precio"><br/>
+    <div id="errores"></div>
+    <input type="button" id="crearElemento" value="Añadir Elemento"><br/>
+    <input type="button" id="crearFactura" value="Crear Factura">
+    <input type="button" id="reset" value="Reset"><br/>
+</div>
+<main>
+    <div id="elemento"></div>
+    <div id="factura"></div>
+</main>
+</body>
+</html>
