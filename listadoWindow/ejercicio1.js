@@ -11,14 +11,38 @@
 
 {
     let init = function () {
-        document.body.innerHTML += "<ul>" +
-            "<li>window.outerHeight: Muestra la altura de la página completa: " + window.outerHeight + "</li>" +
-            "<li>window.innerHeight: Muestra la anchura de la página completa: " + window.innerHeight + "</li>" +
-            "<li>window.screen.availHeight: Muestra la altura de la pantalla del usuario menos las interfaces como la barra de Windows: " + window.screen.availHeight + "</li>" +
-            "<li>window.screen.height: Muestra la altura de la pantalla del usuario: " + window.screen.height + "</li>" +
-            "<li>window.document.clientHeight: Muestra la altura del elemento seleccionado, en este caso el body: " + window.document.body.clientHeight + "</li>" +
-            "</ul>";
+        let h1 = document.createElement("h1");
+        h1.textContent="Ejercicio 1 Listado Window";
+        document.body.appendChild(h1);
+        let lista = document.createElement("ul");
+        let outer = document.createElement("li");
+        let texto= document.createTextNode("window.outerHeight: Muestra la altura de la página completa:"+ window.outerHeight);
+        outer.appendChild(texto);
+        let inner = document.createElement("li");
+        texto= document.createTextNode("window.innerHeight: Muestra la altura de la página completa: " + window.innerHeight);
+        inner.appendChild(texto);
+        let availHeight = document.createElement("li");
+        texto= document.createTextNode("window.screen.availHeight: Muestra la altura de la pantalla del usuario menos las interfaces como la barra de Windows: " + window.screen.availHeight);
+        availHeight.appendChild(texto);
+        let height = document.createElement("li");
+        texto= document.createTextNode("window.screen.height: Muestra la altura de la pantalla del usuario: " + window.screen.height);
+        height.appendChild(texto);
+        let clientHeight = document.createElement("li");
+        texto= document.createTextNode("window.document.clientHeight: Muestra la altura del elemento seleccionado, en este caso el body: " + window.document.body.clientHeight);
+        clientHeight.appendChild(texto);
+        lista.appendChild(outer);
+        lista.appendChild(inner);
+        lista.appendChild(availHeight);
+        lista.appendChild(height);
+        lista.appendChild(clientHeight);
+        document.body.appendChild(lista);
+    }
+
+    let limpiarPantalla = function(){
+        document.body.innerHTML="";
     }
 
     window.onload = init;
+    window.addEventListener("resize", limpiarPantalla);
+    window.addEventListener("resize", init);
 }

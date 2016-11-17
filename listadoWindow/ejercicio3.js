@@ -21,19 +21,19 @@
     }
 
     let bajarUnaLinea = function(){
-        window.scrollBy(0,50);
+        window.scrollBy(0,document.getElementById("p").clientHeight+10);
     }
 
     let subirUnaLinea = function(){
-        window.scrollBy(0,-50);
+        window.scrollBy(0,-(document.getElementById("p").clientHeight+10));
     }
 
     let bajarUnaPagina = function(){
-        window.scrollBy(0,400);
+        window.scrollBy(0,(window.innerHeight)-20);
     }
 
     let subirUnaPagina = function(){
-        window.scrollBy(0,-400);
+        window.scrollBy(0,(-window.innerHeight)+20);
     }
 
     let init = function () {
