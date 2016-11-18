@@ -31,65 +31,76 @@ Factura.prototype.calcularTotal = function () {
 {
     let arrayElementos = [];
 
+    let nombreCliente;
+    let direccion;
+    let telefono;
+    let descripcion;
+    let cantidad;
+    let precio;
+    let crearFactura;
+    let crearElemento;
+    let contenedorElemento;
+    let contenedorFactura;
+    let reset;
+    let error;
+
     let init = function () {
-        let nombreCliente = document.getElementById("nombre");
-        let direccion = document.getElementById("direccion");
-        let telefono = document.getElementById("telefono");
-        let descripcion = document.getElementById("descripcion");
-        let cantidad = document.getElementById("cantidad");
-        let precio = document.getElementById("precio");
-        let crearFactura = document.getElementById("crearFactura");
-        let crearElemento = document.getElementById("crearElemento");
-        let contenedorElemento = document.getElementById("elemento");
-        let contenedorFactura = document.getElementById("factura");
-        let reset = document.getElementById("reset");
-        let error = document.getElementById("errores");
-
-        let resetear = function () {
-            nombreCliente.value = "";
-            direccion.value = "";
-            telefono.value = "";
-            descripcion.value = "";
-            cantidad.value = "";
-            precio.value = "";
-            arrayElementos = [];
-            contenedorFactura.innerHTML = "";
-            contenedorElemento.innerHTML = "";
-        }
-
-        let annadirElemento = function () {
-            if (cantidad.value <= 0 || precio.value <= 0)
-                error.innerHTML = "El precio y la cantidad deben ser mayores que 0";
-            else {
-                arrayElementos.push(new Elemento(descripcion.value, cantidad.value, precio.value));
-                contenedorElemento.innerHTML += "Descripcion: " + descripcion.value + " <br/>Cantidad: " +
-                    cantidad.value + "<br/>Precio: " + precio.value + "€<br/>______________________________<br/><br/>";
-                error.innerHTML = "";
-            }
-
-        }
-
-        let comprobarTelefono = function () {
-            let patronTelefono = /^[1-9]{1}[0-9]{8}$/;
-            return patronTelefono.test(telefono.value);
-        }
-
-        let crearNuevaFacturaYMostrar = function () {
-            if (nombreCliente.length <= 0 || !comprobarTelefono())
-                error.innerHTML = "El nombre no puede estar vacio y el teléfono debe ser válido";
-            else {
-                let factura = new Factura(new Cliente(nombreCliente.value, direccion.value, telefono.value), arrayElementos);
-                factura.calcularTotal();
-                contenedorFactura.innerHTML = "Cliente: " + factura.cliente.nombre + ", Total: " + factura.total + "€";
-                error.innerHTML = "";
-            }
-        }
+        nombreCliente = document.getElementById("nombre");
+        direccion = document.getElementById("direccion");
+        telefono = document.getElementById("telefono");
+        descripcion = document.getElementById("descripcion");
+        cantidad = document.getElementById("cantidad");
+        precio = document.getElementById("precio");
+        crearFactura = document.getElementById("crearFactura");
+        crearElemento = document.getElementById("crearElemento");
+        contenedorElemento = document.getElementById("elemento");
+        contenedorFactura = document.getElementById("factura");
+        reset = document.getElementById("reset");
+        error = document.getElementById("errores");
 
         crearFactura.addEventListener("click", crearNuevaFacturaYMostrar);
         reset.addEventListener("click", resetear);
         crearElemento.addEventListener("click", annadirElemento);
 
+    }
 
+    let resetear = function () {
+        nombreCliente.value = "";
+        direccion.value = "";
+        telefono.value = "";
+        descripcion.value = "";
+        cantidad.value = "";
+        precio.value = "";
+        arrayElementos = [];
+        contenedorFactura.innerHTML = "";
+        contenedorElemento.innerHTML = "";
+    }
+
+    let annadirElemento = function () {
+        if (cantidad.value <= 0 || precio.value <= 0)
+            error.innerHTML = "El precio y la cantidad deben ser mayores que 0";
+        else {
+            arrayElementos.push(new Elemento(descripcion.value, cantidad.value, precio.value));
+            contenedorElemento.innerHTML += "Descripcion: " + descripcion.value + " <br/>Cantidad: " +
+                cantidad.value + "<br/>Precio: " + precio.value + "€<br/>______________________________<br/><br/>";
+            error.innerHTML = "";
+        }
+    }
+
+    let comprobarTelefono = function () {
+        let patronTelefono = /^[1-9]{1}[0-9]{8}$/;
+        return patronTelefono.test(telefono.value);
+    }
+
+    let crearNuevaFacturaYMostrar = function () {
+        if (nombreCliente.length <= 0 || !comprobarTelefono())
+            error.innerHTML = "El nombre no puede estar vacio y el teléfono debe ser válido";
+        else {
+            let factura = new Factura(new Cliente(nombreCliente.value, direccion.value, telefono.value), arrayElementos);
+            factura.calcularTotal();
+            contenedorFactura.innerHTML = "Cliente: " + factura.cliente.nombre + ", Total: " + factura.total + "€";
+            error.innerHTML = "";
+        }
     }
 
     window.onload = init;
