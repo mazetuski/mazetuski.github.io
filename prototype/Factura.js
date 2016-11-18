@@ -93,7 +93,7 @@ Factura.prototype.calcularTotal = function () {
     }
 
     let crearNuevaFacturaYMostrar = function () {
-        if (nombreCliente.length <= 0 || !comprobarTelefono())
+        if (nombreCliente.value.length <= 0 || !comprobarTelefono())
             error.innerHTML = "El nombre no puede estar vacio y el teléfono debe ser válido";
         else {
             let factura = new Factura(new Cliente(nombreCliente.value, direccion.value, telefono.value), arrayElementos);
