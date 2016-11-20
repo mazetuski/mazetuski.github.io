@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+}
+
+#imagenGato{
+    width: 250px;
+    height: 300px;
+    margin: 30px auto;
+    display: inline-block;
+}
+
+#fichaGato{
+    display: inline-block;
+    width: 30%;
+    vertical-align: 100px;
+}
