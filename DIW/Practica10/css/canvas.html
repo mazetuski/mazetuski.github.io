@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miguel Ángel Zamora Blanco</title>
+    <script type="text/javascript">
+        //Recibe un identificador del elemento canvas y carga el canvas
+        //Devueve el contexto del canvas o FALSE si no ha podido conseguise
+        function cargaContextoCanvas(idCanvas) {
+            var elemento = document.getElementById(idCanvas);
+            if (elemento && elemento.getContext) {
+                var contexto = elemento.getContext('2d');
+                if (contexto) {
+                    return contexto;
+                }
+            }
+            return FALSE;
+        }
+        window.onload = function () {
+            //Recibimos el elemento canvas
+            var contexto = cargaContextoCanvas('micanvas');
+            if (contexto) {
+
+                contexto.beginPath();
+                contexto.lineWidth=4;
+                contexto.strokeStyle = "#000";
+                contexto.fillStyle = "#333333"
+                contexto.lineTo(30, 50);
+                contexto.lineTo(35, 160);
+                contexto.lineTo(70, 168);
+                contexto.lineTo(90, 145);
+                contexto.lineTo(115, 30);
+                contexto.lineTo(55, 35);
+                contexto.closePath();
+                contexto.stroke();
+                contexto.fill();
+                contexto.beginPath();
+                contexto.lineWidth=2;
+                contexto.lineTo(30, 50);
+                contexto.lineTo(85, 45);
+                contexto.lineTo(70, 168);
+                contexto.stroke();
+                contexto.beginPath();
+                contexto.lineTo(115, 30);
+                contexto.lineTo(85, 45);
+                contexto.stroke();
+                contexto.beginPath();
+                contexto.fillStyle = "#4D4D4D";
+                contexto.arc(55, 80, 20, 0, Math.PI*2);
+                contexto.stroke();
+                contexto.fill();
+                contexto.beginPath();
+                contexto.fillStyle = "#CCCCCC";
+                contexto.arc(55, 80, 5, 0, Math.PI*2);
+                contexto.stroke();
+                contexto.fill();
+                contexto.beginPath();
+                contexto.fillStyle = "#4D4D4D";
+                contexto.arc(54, 130, 15, 0, Math.PI*2);
+                contexto.stroke();
+                contexto.fill();
+                contexto.beginPath();
+                contexto.fillStyle = "#CCCCCC";
+                contexto.arc(54, 130, 3, 0, Math.PI*2);
+                contexto.stroke();
+                contexto.fill();
+            }
+        }
+    </script>
+</head>
+<body>
+<canvas id="micanvas" height="800" width="800">
+    No funciona en este navegador.
+</canvas>
+</body>
+</html>

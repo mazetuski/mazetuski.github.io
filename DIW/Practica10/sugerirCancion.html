@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica 10</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body itemscope itemtype="http://schema.org/Person">
+<div id="web">
+    <header>
+        <div id="altavoz1"></div>
+        <div id="mifoto"><a href="https://github.com/mazetuski?tab=repositories"><img src="Imagenes/mifoto.jpg"></a>
+        </div>
+        <div id="titulo">
+            <h1 itemprop="author">Miguel Ángel Zamora Blanco</h1>
+
+            <h3>Practica 10. Diseño Interfaces Web</h3>
+        </div>
+        <div id="altavoz2"></div>
+        <!--<canvas id="altavoz2">No funciona canvas en este navegador</canvas>-->
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Novedades</a></li>
+            <li><a href="#">Canciones</a></li>
+            <li><a href="#">Grupos</a></li>
+            <li><a href="sugerirCancion.html">Top(Form)</a></li>
+        </ul>
+    </nav>
+    <div id="sugerir">
+        <form action="#" method="post">
+
+            <table border=0>
+                <tr>
+                    <td id="nombreInputs">
+                        <p>Canción </p>
+
+                    <td id="inputs">
+                        <input type="text" size=50% name="nombre" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Autor </p>
+                    </td>
+                    <td>
+                        <input type="text" size=50% name="autor" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Motivo </p>
+                    </td>
+                    <td>
+                        <textarea cols=50% rows=4 name="motivo"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="submit" value="Enviar">
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+        <footer>
+            <h6> (c) 2016 - Práctica 10 - Miguel Ángel Zamora Blanco</h6>
+            <a href="https://github.com/mazetuski?tab=repositories">
+                <div id="git"></div>
+            </a>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
