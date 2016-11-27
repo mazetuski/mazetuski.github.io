@@ -1,0 +1,39 @@
+.centrar{
+    margin: 0 auto;
+    width: 10%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+#principal{
+    width: 70%;
+    text-align: center;
+    display: block;
+}
+
+#secundario{
+    text-align: center;
+}
+
+table{
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid grey;
+    border-radius: 20%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+td{
+    padding: 5px;
+}
+
+input{
+    margin: 10px;
+}
+
+.error{
+    text-align: left;
+    color: darkred;
+}
