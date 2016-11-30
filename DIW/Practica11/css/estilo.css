@@ -1,0 +1,177 @@
+body {
+    background: url('../Imagenes/pared.jpg');
+}
+
+header {
+    text-align: center;
+    color: #403b33;
+}
+
+#titulo {
+    width: 25%;
+    height: 180px;
+    margin: 0 auto;
+    background: url("../Imagenes/clavo.png");
+    background-size: 100% 100%;
+    margin-top: 0;
+    min-width: 475px;
+    max-width: 475px;
+}
+
+#titulo h1 {
+    margin: 0;
+    padding-top: 120px;
+}
+
+#principal {
+    max-width: 2000px;
+    margin: 0 auto;
+    background: url("../Imagenes/cork-background.jpg");
+    background-size: 100% 100%;
+    border: 40px solid #edebe6;
+    border-image: url("../Imagenes/madera.jpg") 20 round;
+    box-shadow: 5px 5px 10px grey;
+    min-width: 1200px;
+    max-width: 1500px;
+    outline: 1px solid black;
+    box-shadow: inset -1px -1px 6px 3px black;
+}
+
+main {
+    width: 78%;
+    display: inline-block;
+}
+
+main section article {
+    width: 30%;
+    min-width: 300px;
+    max-width: 300px;
+    display: inline-block;
+    margin: 30px;
+    background-image: url("../Imagenes/nota2.jpg");
+    background-size: 100% 150%;
+    min-height: 200px;
+    vertical-align: top;
+    transition: all 1s;
+}
+
+main section article:hover{
+    background-image: url("../Imagenes/nota2-1.png");
+    transform: scale(1.1, 1.1);
+    box-shadow: 0px 0px 20px black;
+    transition: background-image 1s, transform 1s, box-shadow 1s;
+}
+
+main section article ul {
+    list-style: none;
+    padding-left: 15px;
+    margin: 0;
+}
+
+main section article li {
+    padding: 5px 5px;
+}
+
+nav {
+    width: 18%;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 300px;
+    min-width: 250px;
+    background: url("../Imagenes/nota.png");
+    background-size: 100% 100%;
+    min-height: 450px;
+    margin-top: 20px;
+    font-size: 1.3em;
+}
+
+nav ul {
+    margin-top: 45px;
+    transform: rotate(3.5deg);
+    margin-left: 10px;
+}
+
+nav li {
+    list-style: none;
+    padding: 10px;
+    transition: all 1s;
+}
+
+nav a {
+    text-decoration: line-through;
+    color: #3e4147;
+    text-shadow: 1px 1px 2px grey;
+    transition: all 1s;
+}
+
+nav li:hover{
+    transform:  scale(1.05, 1.05);
+    transition:  transform 1s;
+}
+
+nav li:hover a{
+    text-decoration:none;
+    color: #800000;
+    transition: color 1s;
+}
+
+#nuevo {
+    width: 27px;
+    height: 27px;
+    background: url("../Imagenes/nuevo.svg");
+    background-size: 100% 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+footer {
+    text-align: center;
+}
+
+#copyRight {
+    width: 30%;
+    height: 100px;
+    margin: 0 auto;
+    background: url("../Imagenes/nota3.png");
+    background-size: 100% 100%;
+    min-width: 400px;
+}
+
+#copyRight h6 {
+    padding-top: 40px;
+}
+
+.borrar {
+    width: 27px;
+    height: 27px;
+    background-image: url("../Imagenes/delete.svg");
+    background-size: 100% 100%;
+    display: inline-block;
+    transition: background-image 0.5s, transform 0.5s;
+}
+
+.modificar {
+    width: 27px;
+    height: 27px;
+    background-image: url("../Imagenes/lapiz.svg");
+    background-size: 100% 100%;
+    display: inline-block;
+    transition: background-image 0.5s, transform 0.5s;
+}
+
+.modificar:hover{
+    background-image: url('../Imagenes/lapizRojo.svg');
+    transform: scale(1.2, 1.2);
+    transition: background-image 0.5s, transform 0.5s;
+}
+
+.borrar:hover{
+    background-image: url('../Imagenes/deleteRojo.svg');
+    transform: scale(1.2, 1.2);
+    transition: background-image 0.5s, transform 0.5s;
+}
+
+.iconos {
+    text-align: right;
+    padding-top: 5px;
+}
