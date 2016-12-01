@@ -1,5 +1,6 @@
 body {
     background: url('../Imagenes/pared.jpg');
+    background-size: 25% 30%;
 }
 
 header {
@@ -42,7 +43,7 @@ main {
     display: inline-block;
 }
 
-main section article {
+.articulos {
     width: 30%;
     min-width: 300px;
     max-width: 300px;
@@ -52,14 +53,14 @@ main section article {
     background-size: 100% 150%;
     min-height: 200px;
     vertical-align: top;
-    transition: all 1s;
+    transition: transform 1s, box-shadow 1s;
 }
 
-main section article:hover{
+.articulos:hover{
     background-image: url("../Imagenes/nota2-1.png");
     transform: scale(1.1, 1.1);
     box-shadow: 0px 0px 20px black;
-    transition: background-image 1s, transform 1s, box-shadow 1s;
+    transition: transform 1s, box-shadow 1s;
 }
 
 main section article ul {
@@ -115,6 +116,35 @@ nav li:hover a{
     transition: color 1s;
 }
 
+#notaNueva{
+    width: 50%;
+    margin: 0 auto;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 400px;
+    background: url("../Imagenes/nota4.png");
+    background-size: 100% 100%;
+}
+
+#notaNueva table{
+    margin: 30px auto;
+    padding-top: 50px;
+}
+
+#notaNueva table td{
+    padding: 10px 5px;
+}
+
+#notaNueva>table textarea{
+    resize: none;
+    width: 200px;
+    height: 100px;
+}
+
+#crear{
+    text-align: right;
+}
+
 #nuevo {
     width: 27px;
     height: 27px;
@@ -142,8 +172,8 @@ footer {
 }
 
 .borrar {
-    width: 27px;
-    height: 27px;
+    width: 20px;
+    height: 25px;
     background-image: url("../Imagenes/delete.svg");
     background-size: 100% 100%;
     display: inline-block;
@@ -151,12 +181,13 @@ footer {
 }
 
 .modificar {
-    width: 27px;
-    height: 27px;
+    width: 20px;
+    height: 25px;
     background-image: url("../Imagenes/lapiz.svg");
     background-size: 100% 100%;
     display: inline-block;
     transition: background-image 0.5s, transform 0.5s;
+    margin-right: 2px;
 }
 
 .modificar:hover{
@@ -174,4 +205,13 @@ footer {
 .iconos {
     text-align: right;
     padding-top: 5px;
+    padding-right: 5px;
+}
+
+[required]{
+    box-shadow: 0px 0px 5px green;
+}
+
+input:invalid, textarea:invalid{
+    box-shadow: 0px 0px 5px red;
 }

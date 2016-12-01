@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miguel Ángel Zamora Blanco</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body itemscope itemtype="http://schema.org/Person">
+<div id="web">
+    <header>
+        <div id="titulo">
+            <h1 itemprop="author">Gestión de Tareas</h1>
+        </div>
+    </header>
+    <div id="principal">
+        <main>
+            <section id="form">
+                <article id="notaNueva">
+                    <form method="post" action="index.html">
+                        <table>
+                            <tr>
+                                <td>Nombre</td>
+                                <td><input type="text" required autofocus>
+                            </tr>
+                            <tr>
+                                <td>Módulo</td>
+                                <td><select>
+                                    <option value="diw">DIW</option>
+                                    <option value="eie">EIE</option>
+                                    <option value="hlc">HLC</option>
+                                    <option value="dawes">DAWES</option>
+                                    <option value="dawec">DAWEC</option>
+                                    <option value="daweb">DAWEB</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td>Fecha</td>
+                                <td><input type="date" required></td>
+                            </tr>
+                            <tr>
+                                <td>Descripción</td>
+                                <td><textarea required></textarea></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td id="crear"><input type="submit" value="Crear Nota"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </article>
+            </section>
+        </main>
+        <nav>
+            <ul>
+                <li><a href="nuevaNota.html" id="nuevoTexto">Nueva Nota
+                    <div id="nuevo"></div>
+                </a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">DAWEC</a></li>
+                <li><a href="#">DAWES</a></li>
+                <li><a href="#">DAWEB</a></li>
+                <li><a href="#">DIW</a></li>
+                <li><a href="#">HLC</a></li>
+                <li><a href="#">EIE</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <div id="copyRight">
+                <h6> (c) 2016 - <span itemprop="colleage">IES Gran Capitán</span> - <span itemprop="name">Miguel Ángel Zamora Blanco</span>
+                </h6>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
