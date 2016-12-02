@@ -1,0 +1,11 @@
+.titulo{
+    text-align: right;
+}
+
+td{
+    padding: 10px 5px;
+}
+
+select{
+    min-width:80px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miguel Ángel Zamora Blanco</title>
+    <link rel="stylesheet" href="formulario.css">
+    <script type="text/javascript" src="validar.js"></script>
+    <script type="text/javascript" src="formulario.js"></script>
+</head>
+<body>
+<noscript>
+    <h3>Tu navegador no soporta JavaScript.</h3>
+</noscript>
+<h1>Formulario:</h1>
+<form method="post" action="formulario.html">
+<table>
+    <tr>
+        <td class="titulo">Nombre</td>
+        <td><input type="text" id="nombre"></td>
+        <td><div id="errorNombre"></div></td>
+    </tr>
+    <tr>
+        <td class="titulo">Apellidos</td>
+        <td><input type="text" id="apellido"></td>
+        <td><div id="errorApellido"></div></td>
+    </tr>
+    <tr>
+        <td class="titulo">Dirección correo</td>
+        <td><input type="text" id="email"></td>
+        <td><div id="errorEmail"></div></td>
+    </tr>
+    <tr>
+        <td class="titulo">DNI</td>
+        <td><input type="text" id="dni"></td>
+        <td><div id="errorDni"></div></td>
+    </tr>
+    <tr>
+        <td class="titulo">Fecha Nacimiento</td>
+        <td><input type="text" id="fecha"></td>
+        <td><div id="errorFecha"></div></td>
+    </tr>
+    <tr>
+        <td class="titulo">Teléfono</td>
+        <td><input type="text" id="telefono"></td>
+        <td><div id="errorTel"></div></td>
+    </tr>
+    <tr>
+        <td class="titulo">Cuenta bancaria</td>
+        <td><input type="text" id="cuenta"></td>
+        <td><div id="errorCuenta"></div></td>
+    </tr>
+    <tr>
+        <td class="titulo">Url</td>
+        <td><input type="text" id="url"></td>
+        <td><div id="errorUrl"></div></td>
+    </tr>
+    <tr>
+        <td class="titulo">Sexo</td>
+        <td><input type="radio" name="sexo" id="sexo1">Mujer
+        <input type="radio" name="sexo">Hombre</td>
+        <td><div id="errorSexo"></div></td>
+    </tr>
+    <tr>
+        <td class="titulo">Idiomas</td>
+        <td><select id="idiomas" multiple>
+            <option value="ingles">Inglés</option>
+            <option value="frances">Francés</option>
+            <option value="español">Español</option>
+            <option value="aleman">Alemán</option>
+        </select></td>
+        <td><div id="errorIdiomas"></div></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="titulo"><input type="button" id="enviar" value="Enviar"></td>
+    </tr>
+</table>
+</body>
+</html>
