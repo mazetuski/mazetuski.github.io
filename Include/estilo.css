@@ -1,16 +1,25 @@
-#Principal h1{
+body, #web{
+	height: 100%;
+}
+
+#web{
+	background-color: #0D6759;
+	max-width: 1910px;
+	margin: 0 auto;
+	border-radius: 0 0 20px 20px;
+}
+header h1{
 	text-align: center;
 	color:white;
 }
-#Principal p{
+header p{
 	text-align: center;
 	font-size: 18px;
 	color:grey;
 }
-#Principal{
+header{
 	background-color: #001359;
 	padding: 0.5em;
-	box-shadow: 4px 4px 7px grey;
 }
 
 #Imagenes p{
@@ -23,4 +32,90 @@
 ul{
 	font-size: 20px;
 	margin:2em;
+}
+
+main{
+	width: 95%;
+	margin: 10px auto;
+}
+
+nav{
+	background-color: #001359;
+	box-shadow: 0 5px 10px #092f25;
+}
+
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+nav ul li{
+	display: inline-block;
+	padding: 20px 20px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: lightgrey;
+}
+
+section{
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	background:radial-gradient(circle, #d7f0eb 70%, #cacfc9 90%);
+	box-shadow: 5px 5px 15px black;
+	margin:10px 0;
+	transition: all 1s;
+	transform: scale(1, 1);
+	overflow: hidden;
+	min-width: 270px;
+}
+
+section:hover{
+	transition: transform 1s;
+	transform: scale(1.02, 1.02);
+}
+
+section h3{
+	text-align: left;
+	padding-left: 20px;
+	text-decoration: underline;
+}
+
+section ul{
+	list-style: none;
+	margin: 0;
+	padding:0 0 20px 40px;
+}
+
+section ul li{
+	display: inline-block;
+	padding: 10px;
+}
+
+section ul li a{
+	text-decoration: none;
+	color: white;
+	background-color: #001359;
+	padding: 5px;
+	border-radius: 10px;
+	transition: all 1s;
+}
+
+section ul li a:hover{
+	background-color: #0D6759;
+	box-shadow:2px 2px 5px grey ;
+	transition:background-color 1s;
+}
+
+footer{
+	background:linear-gradient(#0C6557 5%, #001359 40%);
+	text-align: center;
+	padding: 20px;
+	color: white;
+	margin-top: 30px;
+	border-radius: 0 0 20px 20px;
 }
