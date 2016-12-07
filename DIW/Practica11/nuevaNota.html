@@ -19,35 +19,18 @@
             <section id="form">
                 <article id="notaNueva">
                     <form method="post" action="index.html">
-                        <table>
-                            <tr>
-                                <td>Nombre</td>
-                                <td><input type="text" required autofocus>
-                            </tr>
-                            <tr>
-                                <td>Módulo</td>
-                                <td><select>
-                                    <option value="diw">DIW</option>
-                                    <option value="eie">EIE</option>
-                                    <option value="hlc">HLC</option>
-                                    <option value="dawes">DAWES</option>
-                                    <option value="dawec">DAWEC</option>
-                                    <option value="daweb">DAWEB</option>
-                                </select></td>
-                            </tr>
-                            <tr>
-                                <td>Fecha</td>
-                                <td><input type="date" required></td>
-                            </tr>
-                            <tr>
-                                <td>Descripción</td>
-                                <td><textarea required></textarea></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td id="crear"><input type="submit" value="Crear Nota"></td>
-                            </tr>
-                        </table>
+                        <p><label class="label">Nombre </label><input type="text" required autofocus></p>
+                        <p><label>Módulo </label> <select>
+                            <option value="diw">DIW</option>
+                            <option value="eie">EIE</option>
+                            <option value="hlc">HLC</option>
+                            <option value="dawes">DAWES</option>
+                            <option value="dawec">DAWEC</option>
+                            <option value="daweb">DAWEB</option>
+                        </select></p>
+                        <p><label>Fecha </label> <input type="date" required></p>
+                        <p><label>Descripción </label><textarea required></textarea></p>
+                        <p><label></label><input type="submit" value="Crear Nota"></p>
                     </form>
                 </article>
             </section>

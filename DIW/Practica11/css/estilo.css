@@ -4,70 +4,54 @@ body {
     font-family: 'Indie Flower', cursive;
     color: black;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 19px;
+}
+
+#copyRight {
+    width: 30%;
+    height: 100px;
+    margin: 0 auto;
+    background: url("../Imagenes/nota3.png");
+    background-size: 100% 100%;
+    min-width: 400px;
+}
+
+#copyRight h6 {
+    padding-top: 40px;
 }
 
 footer {
     text-align: center;
 }
 
+form{
+    padding-top: 17px;
+    margin-top: 20px;
+}
+
+form p{
+    text-align: center;
+    padding-top: 10px;
+}
+
 header {
     text-align: center;
-}
-
-#titulo {
-    width: 25%;
-    height: 180px;
-    margin: 0 auto;
-    background: url("../Imagenes/clavo.png");
-    background-size: 100% 100%;
-    margin-top: 0;
-    min-width: 475px;
-    max-width: 475px;
-}
-
-#titulo h1 {
-    margin: 0;
-    padding-top: 120px;
-}
-
-#principal {
-    max-width: 2000px;
-    margin: 0 auto;
-    background: url("../Imagenes/cork-background.jpg");
-    background-size: 100% 100%;
-    border: 40px solid #edebe6;
-    border-image: url("../Imagenes/madera.jpg") 20 round;
-    box-shadow: 5px 5px 10px grey;
     min-width: 1200px;
-    max-width: 1500px;
-    outline: 1px solid black;
-    box-shadow: inset -1px -1px 6px 3px black;
+}
+
+label{
+    width: 25%;
+    text-align: left;
+    display: inline-block;
+}
+
+input, select, textarea{
+    width: 40%;
 }
 
 main {
     width: 78%;
     display: inline-block;
-}
-
-.articulos {
-    width: 30%;
-    min-width: 300px;
-    max-width: 300px;
-    display: inline-block;
-    margin: 30px;
-    background-image: url("../Imagenes/nota2.jpg");
-    background-size: 100% 150%;
-    min-height: 200px;
-    vertical-align: top;
-    transition: transform 1s, box-shadow 1s;
-}
-
-.articulos:hover{
-    background-image: url("../Imagenes/nota2-1.png");
-    transform: scale(1.1, 1.1);
-    box-shadow: 0px 0px 20px black;
-    transition: transform 1s, box-shadow 1s;
 }
 
 main section article ul {
@@ -148,10 +132,6 @@ nav li:hover a{
     height: 100px;
 }
 
-#crear{
-    text-align: right;
-}
-
 #nuevo {
     width: 27px;
     height: 27px;
@@ -161,17 +141,54 @@ nav li:hover a{
     vertical-align: middle;
 }
 
-#copyRight {
-    width: 30%;
-    height: 100px;
+#principal {
+    max-width: 2000px;
     margin: 0 auto;
-    background: url("../Imagenes/nota3.png");
+    background: url("../Imagenes/cork-background.jpg");
     background-size: 100% 100%;
-    min-width: 400px;
+    border: 40px solid #edebe6;
+    border-image: url("../Imagenes/madera.jpg") 20 round;
+    box-shadow: 5px 5px 10px grey;
+    min-width: 1200px;
+    max-width: 1500px;
+    outline: 1px solid black;
+    box-shadow: inset -1px -1px 6px 3px black;
 }
 
-#copyRight h6 {
-    padding-top: 40px;
+#titulo {
+    width: 25%;
+    height: 180px;
+    margin: 0 auto;
+    background: url("../Imagenes/clavo.png");
+    background-size: 100% 100%;
+    margin-top: 0;
+    min-width: 475px;
+    max-width: 475px;
+}
+
+#titulo h1 {
+    margin: 0;
+    padding-top: 120px;
+}
+
+.articulos {
+    width: 30%;
+    min-width: 300px;
+    max-width: 300px;
+    display: inline-block;
+    margin: 30px;
+    background-image: url("../Imagenes/nota2.jpg");
+    background-size: 100% 150%;
+    min-height: 200px;
+    vertical-align: top;
+    transition: transform 1s, box-shadow 1s;
+}
+
+.articulos:hover{
+    background-image: url("../Imagenes/nota2-1.png");
+    transform: scale(1.1, 1.1);
+    box-shadow: 0px 0px 20px black;
+    transition: transform 1s, box-shadow 1s;
 }
 
 .borrar {
@@ -181,6 +198,18 @@ nav li:hover a{
     background-size: 100% 100%;
     display: inline-block;
     transition: background-image 0.5s, transform 0.5s;
+}
+
+.borrar:hover{
+    background-image: url('../Imagenes/deleteRojo.svg');
+    transform: scale(1.2, 1.2);
+    transition: background-image 0.5s, transform 0.5s;
+}
+
+.iconos {
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 5px;
 }
 
 .modificar {
@@ -197,18 +226,6 @@ nav li:hover a{
     background-image: url('../Imagenes/lapizRojo.svg');
     transform: scale(1.2, 1.2);
     transition: background-image 0.5s, transform 0.5s;
-}
-
-.borrar:hover{
-    background-image: url('../Imagenes/deleteRojo.svg');
-    transform: scale(1.2, 1.2);
-    transition: background-image 0.5s, transform 0.5s;
-}
-
-.iconos {
-    text-align: right;
-    padding-top: 5px;
-    padding-right: 5px;
 }
 
 [required]{
