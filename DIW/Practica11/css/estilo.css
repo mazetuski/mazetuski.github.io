@@ -1,11 +1,18 @@
 body {
     background: url('../Imagenes/pared.jpg');
     background-size: 25% 30%;
+    font-family: 'Indie Flower', cursive;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+footer {
+    text-align: center;
 }
 
 header {
     text-align: center;
-    color: #403b33;
 }
 
 #titulo {
@@ -152,10 +159,6 @@ nav li:hover a{
     background-size: 100% 100%;
     display: inline-block;
     vertical-align: middle;
-}
-
-footer {
-    text-align: center;
 }
 
 #copyRight {
