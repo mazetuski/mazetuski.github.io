@@ -1,0 +1,290 @@
+html{
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    height: 100%;
+    background-image: url("../imagenes/arbol.png");
+    background-size: 100% 100%;
+    justify-content: center;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.botonReservar{
+    background: #5E2F1B;
+    color: white;
+    padding: 4px 15px;
+    font-family: 'Pacifico', cursive;
+    z-index: 1;
+}
+
+#hoja1, #hoja2, #hoja3, #hoja4{
+    position: absolute;
+    width: 100px;
+    height: 80px;
+}
+
+#hoja1{
+    top: -20%;
+    left: 20%;
+    animation: movimiento1 13s infinite;
+}
+
+#hoja2{
+    top: -20%;
+    right: 20%;
+    animation: movimiento2 13s infinite;
+    animation-delay: 2s;
+}
+
+#hoja3{
+    top: -20%;
+    right: 40%;
+    animation: movimiento3 13s infinite;
+    animation-delay: 1.5s;
+    z-index: 0;
+}
+
+@media (min-width: 600px) {
+    #hoja1, #hoja2{
+        top:-40%;
+        width: 200px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 999px) {
+    #hoja1{
+        animation: movimiento3 13s infinite;
+    }
+    #hoja2{
+        animation: movimiento4 13s infinite;
+        animation-delay: 2s;
+    }
+}
+
+@keyframes movimiento1 {
+    0%{
+        top: -20%;
+     }
+    10%{
+        top:0;
+        left:23%;
+        transform: rotate(-20deg);
+    }
+    20%{
+        top:11%;
+        left:17%;
+        transform: rotate(20deg);
+    }
+    30%{
+        top:22%;
+        left:23%;
+        transform: rotate(-20deg);
+    }
+    40%{
+        top:33%;
+        left:17%;
+        transform: rotate(20deg);
+    }
+    50%{
+        top:44%;
+        left:23%;
+        transform: rotate(-20deg);
+    }
+    60%{
+        top:55%;
+        left:17%;
+        transform: rotate(20deg);
+    }
+    70%{
+        top:66%;
+        left:23%;
+        transform: rotate(-20deg);
+    }
+    80%{
+        top:77%;
+        left:17%;
+        transform: rotate(20deg);
+    }
+    90%{
+        top:88%;
+        left:23%;
+        transform: rotate(-20deg);
+    }
+    100%{
+        top:100%;
+        left:17%;
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes movimiento2 {
+    0%{
+        top: -20%;
+    }
+    10%{
+        top:0;
+        right:23%;
+        transform: rotate(20deg);
+    }
+    20%{
+        top:11%;
+        right:17%;
+        transform: rotate(-20deg);
+    }
+    30%{
+        top:22%;
+        right:23%;
+        transform: rotate(20deg);
+    }
+    40%{
+        top:33%;
+        right:17%;
+        transform: rotate(-20deg);
+    }
+    50%{
+        top:44%;
+        right:23%;
+        transform: rotate(20deg);
+    }
+    60%{
+        top:55%;
+        right:17%;
+        transform: rotate(-20deg);
+    }
+    70%{
+        top:66%;
+        right:23%;
+        transform: rotate(20deg);
+    }
+    80%{
+        top:77%;
+        right:17%;
+        transform: rotate(-20deg);
+    }
+    90%{
+        top:88%;
+        right:23%;
+        transform: rotate(20deg);
+    }
+    100%{
+        top:100%;
+        right:17%;
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes movimiento3 {
+    0%{
+        top: -20%;
+    }
+    10%{
+        top:0;
+        left:13%;
+        transform: rotate(-20deg);
+    }
+    20%{
+        top:11%;
+        left:7%;
+        transform: rotate(20deg);
+    }
+    30%{
+        top:22%;
+        left:13%;
+        transform: rotate(-20deg);
+    }
+    40%{
+        top:33%;
+        left:7%;
+        transform: rotate(20deg);
+    }
+    50%{
+        top:44%;
+        left:13%;
+        transform: rotate(-20deg);
+    }
+    60%{
+        top:55%;
+        left:7%;
+        transform: rotate(20deg);
+    }
+    70%{
+        top:66%;
+        left:13%;
+        transform: rotate(-20deg);
+    }
+    80%{
+        top:77%;
+        left:7%;
+        transform: rotate(20deg);
+    }
+    90%{
+        top:88%;
+        left:13%;
+        transform: rotate(-20deg);
+    }
+    100%{
+        top:100%;
+        left:7%;
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes movimiento4 {
+    0%{
+        top: -40%;
+    }
+    10%{
+        top:0;
+        right:13%;
+        transform: rotate(20deg);
+    }
+    20%{
+        top:11%;
+        right:7%;
+        transform: rotate(-20deg);
+    }
+    30%{
+        top:22%;
+        right:13%;
+        transform: rotate(20deg);
+    }
+    40%{
+        top:33%;
+        right:7%;
+        transform: rotate(-20deg);
+    }
+    50%{
+        top:44%;
+        right:13%;
+        transform: rotate(20deg);
+    }
+    60%{
+        top:55%;
+        right:7%;
+        transform: rotate(-20deg);
+    }
+    70%{
+        top:66%;
+        right:13%;
+        transform: rotate(20deg);
+    }
+    80%{
+        top:77%;
+        right:7%;
+        transform: rotate(-20deg);
+    }
+    90%{
+        top:88%;
+        right:13%;
+        transform: rotate(20deg);
+    }
+    100%{
+        top:100%;
+        right:7%;
+        transform: rotate(-20deg);
+    }
+}
