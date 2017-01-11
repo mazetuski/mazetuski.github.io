@@ -2,42 +2,6 @@
     font-family: animal;
     src: url("Fonts/AustieBostKittenKlub.ttf");
 }
-
-aside{
-    padding: 10px 0;
-    background:linear-gradient(rgba(0, 68, 6, 1), rgba(0, 47, 6, .9)) ;
-    width: 15%;
-    display: none;
-    box-shadow: -3px 0 black;
-}
-
-aside h2{
-    color: #3a1d12;
-    text-align: center;
-    margin-top: 30px;
-    padding: 10px;
-    text-shadow: 0px 0px 1px white;
-}
-
-aside ul{
-    list-style: none;
-}
-
-aside ul li{
-    padding: 20px 5px;
-    color: white;
-    border-bottom: 2px solid #3a1d12;
-}
-
-aside ul li label{
-    margin-right: 15px;
-}
-
-aside a{
-    text-decoration: none;
-    color: white;
-}
-
 body{
     font-size: 14px;
     background-image: url("../imagenes/madera.jpg");
@@ -46,39 +10,12 @@ body{
     overflow-y: scroll;
 }
 
-#botonFiltro{
-    padding-left: 0;
-}
-
 .botonReservar{
     background: #5E2F1B;
     color: white;
     padding: 4px 15px;
     font-family: 'Pacifico', cursive;
-}
-
-.cuerpo{
-    width: 100%;
-}
-
-#filtro{
-    margin-right: 10px;
-    background: rgb(0, 47, 6);
-    border: none;
-    color: white;
-    min-width: 35px;
-    min-height: 30px;
-    border: 2px solid black;
-}
-
-footer{
-    color: white;
-    background: rgba(0, 47, 6, .9);
-    min-height: 50px;
-    text-align: center;
-    padding: 10px;
-    box-shadow: -5px 0 5px black;
-    font-family: 'Indie Flower', cursive;
+    margin: 0 auto;
 }
 
 header{
@@ -94,6 +31,31 @@ header{
 header h1{
     margin-top: 10px;
 }
+
+footer{
+    color: white;
+    background: rgba(0, 47, 6, .9);
+    min-height: 50px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: -5px 0 5px black;
+    font-family: 'Indie Flower', cursive;
+}
+
+main section article{
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    flex-flow: column;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgba(0, 68, 6, .9);
+    box-shadow: 3px 5px 5px black;
+    border: 2px solid black;
+    transition: background-color 1s;
+}
+
 
 nav{
     text-align: center;
@@ -120,7 +82,7 @@ nav>ul li{
 }
 
 nav ul li a{
-   text-decoration: none;
+    text-decoration: none;
     color: white;
 }
 
@@ -169,54 +131,9 @@ nav ul li:hover{
     transition: color 1s;
 }
 
-main{
-    margin: 0 15px;
-    padding-top: 20px;
-}
-
-main section{
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    flex: 1 0 0;
-    align-items: baseline;
-    color:white;
-    justify-content: center;
-}
-
-main section article{
-    padding: 10px;
-    margin: 15px 0;
-    display: flex;
-    flex-flow: column;
-    flex: 1 0 auto;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: rgba(0, 68, 6, .9);
-    box-shadow: 3px 5px 5px black;
-    border: 2px solid black;
-    transition: background-color 1s;
-}
-
-main section article:hover{
-    background-color: rgb(0, 47, 6);
-    transition: background-color 1s;
-}
-
-main section img{
-    width: 100%;
-    border: 2px solid black;
-}
-
-#principal{
-    display: flex;
-    flex-flow: row;
-    flex: 0 0 auto;
-    align-items: stretch;
-}
-
 #seccionReserva{
-    flex: 1 0 auto;
+    width: 60%;
+    margin: 4em auto;
 }
 
 #seccionReserva form{
@@ -230,7 +147,18 @@ main section img{
     flex-wrap: wrap;
     flex: 0 1 49%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    margin: 0.8em auto;
+}
+
+#seccionReserva label{
+    flex: 1;
+    text-align: center;
+    padding: 0 15px;
+}
+
+#seccionReserva input{
+    flex: 2;
 }
 
 @media (min-width: 600px) {
@@ -303,6 +231,14 @@ main section img{
     main {
         display: flex;
         flex: 0 1 84%;
+    }
+
+    #seccionReserva label{
+        text-align: left;
+    }
+
+    #seccionReserva p{
+        margin: 0.8em 0;
     }
 }
 

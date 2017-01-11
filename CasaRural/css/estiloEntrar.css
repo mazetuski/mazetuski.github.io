@@ -17,7 +17,6 @@ body{
     color: white;
     padding: 4px 15px;
     font-family: 'Pacifico', cursive;
-    z-index: 1;
 }
 
 #hoja1, #hoja2, #hoja3, #hoja4{
@@ -29,7 +28,7 @@ body{
 #hoja1{
     top: -20%;
     left: 20%;
-    animation: movimiento1 13s infinite;
+    animation: movimiento1 10s infinite;
 }
 
 #hoja2{
@@ -39,19 +38,15 @@ body{
     animation-delay: 2s;
 }
 
-#hoja3{
-    top: -20%;
-    right: 40%;
-    animation: movimiento3 13s infinite;
-    animation-delay: 1.5s;
-    z-index: 0;
-}
-
 @media (min-width: 600px) {
     #hoja1, #hoja2{
         top:-40%;
         width: 200px;
         height: 160px;
+    }
+    .botonReservar{
+        padding: 8px 30px;
+        font-size: 2em;
     }
 }
 
