@@ -186,13 +186,30 @@ nav ul li:hover{
     text-decoration: underline;
 }
 
+@media screen and (orientation:landscape){
+    header{
+        background-size: cover;
+    }
+}
+
+@media (min-width: 500px) {
+    main section{
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+}
+
 @media (min-width: 600px) {
     body{
         font-size: 18px;
     }
     header {
-        background-size: 100% 60%;
         min-height: 400px;
+    }
+
+    #imagenes img{
+        width: 32%;
+        height: 45%;
     }
 }
 
@@ -224,15 +241,21 @@ nav ul li:hover{
 
 
 @media screen and (min-width: 1000px){
+    #botonFiltro{
+        display: none;
+    }
+
+    aside{
+        display: flex;
+        flex-flow: column;
+        flex: 0 1 15%;
+    }
+
     header{
         background-size: 100% 100%;
         min-height: 400px;
         border: 15px solid rgba(0, 68, 6, 1);
         border-bottom: 1px solid rgba(0, 68, 6, 1);
-    }
-
-    #imagenes img{
-        width: 30%;
     }
 
     main section{
@@ -246,31 +269,13 @@ nav ul li:hover{
         padding: 15px;
     }
 
-    #botonFiltro{
-        display: none;
-    }
-
     nav{
         font-size: 1.5em;
-    }
-
-    aside{
-        display: flex;
-        flex-flow: column;
-        flex: 0 1 15%;
     }
 
     main {
         display: flex;
         flex: 0 1 84%;
-    }
-
-    #seccionReserva label{
-        text-align: left;
-    }
-
-    #seccionReserva p{
-        margin: 0.8em 0;
     }
 }
 
