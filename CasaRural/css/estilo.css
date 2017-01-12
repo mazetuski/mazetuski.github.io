@@ -235,6 +235,7 @@ main section img{
     justify-content: space-around;
 }
 
+
 @media screen and (orientation:landscape){
     header{
         background-size: cover;
