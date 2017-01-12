@@ -192,13 +192,6 @@ nav ul li:hover{
     }
 }
 
-@media (min-width: 500px) {
-    main section{
-        align-items: flex-start;
-        justify-content: space-around;
-    }
-}
-
 @media (min-width: 600px) {
     body{
         font-size: 18px;
