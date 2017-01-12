@@ -38,6 +38,12 @@ body{
     animation-delay: 2s;
 }
 
+@media screen and (orientation:landscape){
+    header{
+        background-size: cover;
+    }
+}
+
 @media (min-width: 600px) {
     #hoja1, #hoja2{
         top:-40%;

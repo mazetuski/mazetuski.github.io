@@ -23,7 +23,7 @@ header{
     background-image: url("../imagenes/casaRural.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100% 60%;
+    background-size:  contain;
     min-height: 200px;
     text-align: center;
     border: 5px solid rgba(0, 68, 6, 1);
@@ -203,7 +203,6 @@ nav ul li:hover{
     }
 
     header{
-        background-size: 100% 60%;
         min-height: 450px;
     }
 
