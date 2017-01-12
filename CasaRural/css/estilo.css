@@ -55,6 +55,7 @@ body{
     color: white;
     padding: 4px 15px;
     font-family: 'Pacifico', cursive;
+    font-size: 1.4em;
 }
 
 .cuerpo{
@@ -86,7 +87,7 @@ header{
     background-image: url("../imagenes/casaRural.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100% 60%;
+    background-size: contain;
     min-height: 200px;
     text-align: center;
     border: 5px solid rgba(0, 68, 6, 1);
@@ -189,13 +190,14 @@ main section article{
     margin: 15px 0;
     display: flex;
     flex-flow: column;
-    flex: 1 0 auto;
+    flex: 0 1 95%;
     flex-wrap: wrap;
     align-items: center;
     background-color: rgba(0, 68, 6, .9);
     box-shadow: 3px 5px 5px black;
     border: 2px solid black;
     transition: background-color 1s;
+    letter-spacing: 1.5px;
 }
 
 main section article:hover{
@@ -233,12 +235,17 @@ main section img{
     justify-content: space-around;
 }
 
+@media screen and (orientation:landscape){
+    header{
+        background-size: cover;
+    }
+}
+
 @media (min-width: 600px) {
     body{
         font-size: 18px;
     }
     header {
-        background-size: 100% 60%;
         min-height: 400px;
     }
 }
@@ -250,7 +257,6 @@ main section img{
     }
 
     header{
-        background-size: 100% 60%;
         min-height: 450px;
     }
 
@@ -272,6 +278,16 @@ main section img{
 
 
 @media screen and (min-width: 1000px){
+    #botonFiltro{
+        display: none;
+    }
+
+    aside{
+        display: flex;
+        flex-flow: column;
+        flex: 0 1 15%;
+    }
+
     header{
         background-size: 100% 100%;
         min-height: 400px;
@@ -290,14 +306,8 @@ main section img{
         padding: 15px;
     }
 
-    #botonFiltro{
-        display: none;
-    }
-
-    aside{
-        display: flex;
-        flex-flow: column;
-        flex: 0 1 15%;
+    nav{
+        font-size: 1.5em;
     }
 
     main {

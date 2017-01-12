@@ -49,11 +49,11 @@ main section article{
     flex-flow: column;
     flex: 1 0 auto;
     flex-wrap: wrap;
-    align-items: center;
     background-color: rgba(0, 68, 6, .9);
     box-shadow: 3px 5px 5px black;
     border: 2px solid black;
     transition: background-color 1s;
+    color: white;
 }
 
 
@@ -132,8 +132,29 @@ nav ul li:hover{
 }
 
 #seccionReserva{
-    width: 60%;
+    width: 90%;
     margin: 4em auto;
+    align-items: center;
+}
+
+#imagenes{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+#imagenes img{
+    width: 45%;
+    height: 45%;
+    margin: 0.5em 0;
+    border: 2px solid black;
+}
+
+#seccionReserva #descripcion p{
+    font-family: 'Open Sans', sans-serif;
+    margin: 1.1em .8em;
+    flex: 1;
+    justify-content: flex-start;
 }
 
 #seccionReserva form{
@@ -159,6 +180,10 @@ nav ul li:hover{
 
 #seccionReserva input{
     flex: 2;
+}
+
+.subrayar{
+    text-decoration: underline;
 }
 
 @media (min-width: 600px) {
@@ -207,6 +232,10 @@ nav ul li:hover{
         border-bottom: 1px solid rgba(0, 68, 6, 1);
     }
 
+    #imagenes img{
+        width: 30%;
+    }
+
     main section{
         align-items: flex-start;
         justify-content: space-around;
@@ -220,6 +249,10 @@ nav ul li:hover{
 
     #botonFiltro{
         display: none;
+    }
+
+    nav{
+        font-size: 1.5em;
     }
 
     aside{
