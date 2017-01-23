@@ -4,11 +4,14 @@
 }
 
 aside{
-    padding: 10px 0;
-    background:linear-gradient(rgba(0, 68, 6, 1), rgba(0, 47, 6, .9)) ;
-    width: 15%;
-    display: none;
     box-shadow: -3px 0 black;
+    width: 60%;
+    position: absolute;
+    display: none;
+    right: 0;
+    background:rgba(0, 68, 6, 1) ;
+    padding: 10px;
+    transition: all 1s ease;
 }
 
 aside h2{
@@ -27,6 +30,7 @@ aside ul li{
     padding: 20px 5px;
     color: white;
     border-bottom: 2px solid #3a1d12;
+
 }
 
 aside ul li label{
@@ -74,7 +78,7 @@ body{
 
 footer{
     color: white;
-    background: rgba(0, 47, 6, .9);
+    background: rgba(0, 86, 7, 0.9);
     min-height: 50px;
     text-align: center;
     padding: 10px;
@@ -125,13 +129,13 @@ nav ul li a{
     color: white;
 }
 
-nav ul li:hover{
+nav> ul li:hover{
     background-color: rgb(0, 47, 6);
     transition: background-color 1s;
 }
 
-#navFiltro{
-    width: 40%;
+/*#navFiltro{
+    width: 60%;
     position: absolute;
     display: none;
     right: 0px;
@@ -140,7 +144,7 @@ nav ul li:hover{
     border: 2px solid black;
     transition: all 1s ease;
 }
-
+*/
 #navFiltro ul{
     list-style: none;
     display: flex;
@@ -151,11 +155,19 @@ nav ul li:hover{
 
 #navFiltro ul li{
     display: flex;
-    flex-flow: row;
-    justify-content: space-around;
     color: white;
     text-decoration: underline;
     padding: 2px 0;
+    justify-content: space-between;
+}
+
+#navFiltro ul li label{
+    flex: 1;
+    min-width: 30%;
+}
+
+#navFiltro ul li input {
+    flex: 2;
 }
 
 #navFiltro ul li a{
@@ -193,7 +205,7 @@ main section article{
     flex: 0 1 95%;
     flex-wrap: wrap;
     align-items: center;
-    background-color: rgba(0, 68, 6, .9);
+    background-color: rgba(0, 86, 7, 0.9);
     box-shadow: 3px 5px 5px black;
     border: 2px solid black;
     transition: background-color 1s;
@@ -286,7 +298,7 @@ main section img{
     }
 
     #navFiltro{
-        width: 20%;
+        width: 40%;
     }
 }
 
@@ -297,7 +309,9 @@ main section img{
     }
 
     aside{
+        width: 14%;
         display: flex;
+        position: relative;
         flex-flow: column;
         flex: 0 1 15%;
     }
@@ -322,6 +336,11 @@ main section img{
 
     nav{
         font-size: 1.5em;
+    }
+
+    #navFiltro{
+        display: none;
+        visibility: hidden;
     }
 
     main {

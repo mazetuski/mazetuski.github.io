@@ -49,7 +49,7 @@ main section article{
     flex-flow: column;
     flex: 1 0 auto;
     flex-wrap: wrap;
-    background-color: rgba(0, 68, 6, .9);
+    background-color: rgba(0, 86, 7, 0.9);
     box-shadow: 3px 5px 5px black;
     border: 2px solid black;
     transition: background-color 1s;
@@ -134,19 +134,29 @@ nav ul li:hover{
 #seccionReserva{
     width: 90%;
     margin: 4em auto;
-    align-items: center;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#principalImagenes{
+    display: none;
 }
 
 #imagenes{
     display: flex;
-    flex-flow: wrap;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#imagenes a{
+    width: 45%;
+    margin: 0.5em 0;
 }
 
 #imagenes img{
-    width: 45%;
-    height: 45%;
-    margin: 0.5em 0;
+    width: 100%;
+    height: 100%;
     border: 2px solid black;
 }
 
@@ -171,6 +181,14 @@ nav ul li:hover{
     margin: 0.8em 0;
 }
 
+#seccionReserva .botonReservar{
+    flex: 0 1 10%;
+}
+
+#seccionReserva .centrar{
+    flex: 0 1 100%;
+}
+
 #seccionReserva label{
     flex: 1;
     min-width: 90px;
@@ -184,6 +202,7 @@ nav ul li:hover{
 
 .subrayar{
     text-decoration: underline;
+    font-size: 1.3em;
 }
 
 @media screen and (orientation:landscape){
@@ -200,9 +219,9 @@ nav ul li:hover{
         min-height: 400px;
     }
 
-    #imagenes img{
-        width: 32%;
-        height: 45%;
+    #imagenes a{
+        width: 22.9%;
+        height: 100%;
     }
 }
 
@@ -230,6 +249,10 @@ nav ul li:hover{
     #navFiltro{
         width: 20%;
     }
+
+    #seccionReserva form{
+        justify-content: flex-start;
+    }
 }
 
 
@@ -244,6 +267,12 @@ nav ul li:hover{
         flex: 0 1 15%;
     }
 
+    #descripcion{
+        flex: 0 0 45%;
+        text-align: justify;
+        margin-left: 10px;
+    }
+
     header{
         background-size: 100% 100%;
         min-height: 400px;
@@ -251,15 +280,44 @@ nav ul li:hover{
         border-bottom: 1px solid rgba(0, 68, 6, 1);
     }
 
-    main section{
-        align-items: flex-start;
-        justify-content: space-around;
+    h2{
+        display: flex;
+        flex: 1 0 100%;
+        justify-content: center;
+        margin-bottom: 40px;
+        text-shadow: 3px 3px 3px black;
+        font-size: 2em;
     }
 
-    main section article{
-        flex: 0 1 28%;
-        margin: 40px 10px;
-        padding: 15px;
+    #imagenesDiv{
+        width:50%;
+        display: flex;
+        flex-flow: row;
+        flex-wrap:wrap;
+        justify-content: flex-start;
+    }
+
+    #principalImagenes{
+        width: 100%;
+        display: block;
+    }
+
+    #principalImagenes img{
+        width: 100%;
+        border: 2px solid black;
+    }
+
+    #imagenes{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+    }
+
+    #imagenes img{
+        opacity:.5;
+        *width: 23%;
+        flex: 1 0 auto;
     }
 
     nav{
