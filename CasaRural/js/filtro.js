@@ -5,6 +5,6 @@
 
 $(document).ready(function(){
    $("#botonFiltro").click(function(){
-       $("aside").slideToggle("slow");
+       $("aside").slideToggle("200");
    });
 });
