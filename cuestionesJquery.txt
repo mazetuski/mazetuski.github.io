@@ -1,0 +1,151 @@
+// question: 0  name: Switch category to $course$/Particularidades
+$CATEGORY: $course$/Particularidades
+
+
+// question: 2701  name: Particularidades
+::Particularidades::[html]&iquest;C&oacute;mo saber si un checkbox esta true/false?{
+	~[moodle]attr('checked')
+	~[moodle]val('checked')
+	=[moodle]prop('checked')
+}
+
+// question: 2702  name: Particularidades
+::Particularidades::[html]&iquest;C&oacute;mo seleccionar todos los elementos seleccionados?{
+	~[moodle]$('input:selected')
+	~[moodle]prop('selected')
+	~[moodle]prop('checked')
+	=[moodle]$('input:checked')
+}
+
+// question: 2703  name: Particularidades
+::Particularidades::[html]&iquest;Qu&eacute; resultado nos dar&aacute; $( elem ).attr( 'checked' )?{
+	=[moodle]true/false
+	~[moodle]checked/unchecked
+	~[moodle]Todas son incorrectas
+}
+
+// question: 2704  name: Particularidades
+::Particularidades::[html]&iquest;Data sirve para...{
+	=[moodle]Guardar informaci&oacute;n de un elemento
+	~[moodle]Guardar ficheros dentro del sistema
+	~[moodle]Cambiar valores de elementos
+}
+
+// question: 2705  name: Particularidades
+::Particularidades::[html]Para guardar informaci&oacute;n dentro de un elemento se usa: {
+	~[moodle]data('valor')
+	~[moodle]data()
+	=[moodle]data('nombre', 'valor')
+	~[moodle]Todas son verdaderas
+}
+
+// question: 2706  name: Particularidades
+::Particularidades::[html]Para acceder al data de un elemento se usa: {
+	=[moodle]data('nombre')
+	~[moodle]data()
+	~[moodle]data('nombre', 'valor')
+	~[moodle]Todas son verdaderas
+}
+
+// question: 2707  name: Particularidades
+::Particularidades::[html]Para borrar la informaci&oacute;n de un elemento se usa:{
+	~[moodle]removeData('nombre', 'valor')
+	~[moodle]removeData()
+	=[moodle]removeData('nombre')
+	~[moodle]removeCookie()
+}
+
+// question: 2708  name: Particularidades
+::Particularidades::[html]Se pueden guardar objetos a trav&eacute;s de Data(){
+	~[moodle]Falso
+	=[moodle]Verdadero
+}
+
+// question: 2709  name: Particularidades
+::Particularidades::[html]&iquest;si guardamos informaci&oacute;n con data en un selector que contiene varios elementos, que pasa?{
+	=[moodle]Se guarda la informaci&oacute;n en todos los elementos.
+	~[moodle]Se guarda la informaci&oacute;n en el primer elemento.
+	~[moodle]Se guarda la informaci&oacute;n en el &uacute;ltimo elemento.
+	~[moodle]Da un error.
+}
+
+// question: 2710  name: Particularidades
+::Particularidades::[html]&iquest;si usamos el m&eacute;todo queue() sin par&aacute;metros, que pasa?{
+	=[moodle]Usa la cola por defecto.
+	~[moodle]Da error.
+	~[moodle]No hace nada.
+	~[moodle]Todas son falsas.
+}
+
+// question: 2711  name: Particularidades
+::Particularidades::[html]&iquest;Qu&eacute; hace esto: queue('fx'){
+	~[moodle]Accede a una cola nueva que hemos llamado fx.
+	~[moodle]Esta introduciendo el valor 'fx' a la cola.
+	=[moodle]Accede a la cola predeterminada.
+}
+
+// question: 2712  name: Particularidades
+::Particularidades::[html]&iquest;Para qu&eacute; sirve dequeue()?{
+	~[moodle]Para eliminar la cola completamente.
+	~[moodle]Para eliminar todas las colas existentes.
+	=[moodle]Para saltar al siguiente proceso de la cola.
+	~[moodle]Todas son falsas.
+}
+
+// question: 2713  name: Particularidades
+::Particularidades::[html]Se le puede pasar como par&aacute;metro un array de funciones al m&eacute;todo queue(){
+	~[moodle]Falso
+	=[moodle]Verdadero
+}
+
+// question: 2714  name: Particularidades
+::Particularidades::[html]&iquest;Para qu&eacute; sirve el m&eacute;todo stop()?{
+	~[moodle]Para parar la cola por completo.
+	~[moodle]Para parar todas las colas.
+	~[moodle]Para eliminar una cola.
+	=[moodle]Para parar el efecto actual de una cola.
+}
+
+// question: 2715  name: Particularidades
+::Particularidades::[html]&iquest;Qu&eacute; pasa si en el segundo par&acute;metro le ponemos un true, stop(..., true)?{
+	~[moodle]Se para la cola por completo.
+	~[moodle]Se paran todas las colas.
+	=[moodle]Se para la cola y pasa al &uacute;ltimo efecto de la cola.
+}
+
+// question: 2716  name: Particularidades
+::Particularidades::[html]&iquest;Para qu&eacute; sirve el m&eacute;todo stop(true)?{
+	=[moodle]Para parar la cola por completo.
+	~[moodle]Para parar todas las colas.
+	~[moodle]Para eliminar una cola.
+	~[moodle]Para parar el efecto actual de una cola.
+}
+
+// question: 2717  name: Particularidades
+::Particularidades::[html]Each sirve para recorrer todos los elementos seleccionados a traves del selector{
+	=[moodle]Verdadero
+	~[moodle]Falso
+}
+
+// question: 2718  name: Particularidades
+::Particularidades::[html](En JQuery)&iquest;A que equivale un return false dentro de un each? (compar&aacute;ndolo con javascript){
+	=[moodle]break
+	~[moodle]continue
+	~[moodle]if
+	~[moodle]throw
+}
+
+// question: 2719  name: Particularidades
+::Particularidades::[html](En JQuery)&iquest;A que equivale un return true dentro de un each? (compar&aacute;ndolo con javascript){
+	~[moodle]break
+	=[moodle]continue
+	~[moodle]if
+	~[moodle]throw
+}
+
+// question: 2720  name: Particularidades
+::Particularidades::[html]&iquest;Qu&eacute; es la i en esta sentencia: $("p").each(function(i)\{\}){
+	=[moodle]El indice de cada elemento recorrido.
+	~[moodle]Una variable que introduce el usuario.
+	~[moodle]Todas son falsas.
+}

@@ -39,4 +39,8 @@ $(function () {
     $(window).resize(function(){
         efectosImagenes();
     });
+
+    $(".datepicker").datepicker({
+        dateFormat : "dd/mm/yy"
+    });
 });
