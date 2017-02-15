@@ -17,9 +17,22 @@ blogger_blog_contactpage:
     requirements:
       _method:  GET|POST
 
+blogger_blog_faqpage:
+    path:     /faq
+    defaults: { _controller: BloggerBlogBundle:Page:faq }
+    requirements:
+      _method:  GET
+
 blogger_blog_blogshow:
     path:     /{id}
     defaults: { _controller: BloggerBlogBundle:Blog:show }
     methods:  GET
     requirements:
       id: \d+
+
+blogger_blog_comment_create:
+    path:     /comment/{blog_id}
+    defaults: { _controller: BloggerBlogBundle:Comment:create }
+    methods:  POST
+    requirements:
+      blog_id: \d+

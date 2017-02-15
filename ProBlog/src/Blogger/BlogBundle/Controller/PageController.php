@@ -11,12 +11,19 @@ class PageController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('BloggerBlogBundle:Page:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $blogs = $em->getRepository('BloggerBlogBundle:Blog')->getLatestBlogs();
+        return $this->render('BloggerBlogBundle:Page:index.html.twig', array('blogs' => $blogs));
     }
 
     public function aboutAction()
     {
         return $this->render('BloggerBlogBundle:Page:about.html.twig');
+    }
+
+    public function faqAction()
+    {
+        return $this->render('BloggerBlogBundle:Page:faq.html.twig');
     }
 
    /* public function contactAction()
