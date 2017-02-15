@@ -26,26 +26,49 @@ class PageController extends Controller
         return $this->render('BloggerBlogBundle:Page:faq.html.twig');
     }
 
-   /* public function contactAction()
-    {
-        return $this->render('BloggerBlogBundle:Page:contact.html.twig');
-    }*/
+    /* public function contactAction()
+     {
+         return $this->render('BloggerBlogBundle:Page:contact.html.twig');
+     }*/
 
     public function contactAction(Request $request)
     {
         $enquiry = new Enquiry();
         $form = $this->createForm(EnquiryType::class, $enquiry);
         $form->handleRequest($request);
-        if ($form->isValid() && $form->isSubmitted()){
-        $message = \Swift_Message::newInstance()
-            ->setSubject('Contact enquiry from symblog')
-            ->setFrom('enquiries@symblog.co.uk')
-            ->setTo('email@email.com')
-            ->setBody($this->renderView('BloggerBlogBundle:Page:contactEmail.txt.twig', array('enquiry' =>$enquiry)));
+        if ($form->isValid() && $form->isSubmitted()) {
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Contact enquiry from symblog')
+                ->setFrom('enquiries@symblog.co.uk')
+                ->setTo('email@email.com')
+                ->setBody($this->renderView('BloggerBlogBundle:Page:contactEmail.txt.twig', array('enquiry' => $enquiry)));
             $this->get('mailer')->send($message);
             $this->addFlash('notice', 'mensaje enviado');
         }
 
         return $this->render('BloggerBlogBundle:Page:contact.html.twig', array('form' => $form->createView()));
+    }
+
+    public function sidebarAction()
+    {
+        $em = $this->getDoctrine()
+            ->getManager();
+        $tags = $em->getRepository('BloggerBlogBundle:Blog')
+            ->getTags();
+        $tagWeights = $em->getRepository('BloggerBlogBundle:Blog')
+            ->getTagWeights($tags);
+        // return $this->render('BloggerBlogBundle:Page:sidebar.html.twig', array(
+        //     'tags' => $tagWeights
+        // ));
+        $commentLimit = $this->container
+            ->getParameter('blogger_blog.comments.latest_comment_limit');
+        $latestComments = $em->getRepository('BloggerBlogBundle:Comment')
+            ->getLatestComments($commentLimit);
+
+        return $this->render('BloggerBlogBundle:Page:sidebar.html.twig', array(
+            'tags' => $tagWeights,
+            'latestComments' => $latestComments
+
+        ));
     }
 }
