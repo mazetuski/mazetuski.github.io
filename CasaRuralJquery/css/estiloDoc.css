@@ -1,0 +1,21 @@
+header {
+  text-align: center;
+  background-color: #303030;
+  color: #fd9800;
+  margin: 0;
+  padding: 50px;
+  text-shadow: 0 0 1px #fff;
+  box-shadow: 1px 2px 5px #5d5d5d;
+}
+body {
+  background-color: #f0f0f0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul li {
+  border-bottom: 1px solid #fd9800;
+  text-indent: 20px;
+}

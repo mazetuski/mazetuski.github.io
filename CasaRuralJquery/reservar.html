@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+    <title>Miguel Ángel Zamora Blanco</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" href="css/estiloReserva.css">
+    <link rel="stylesheet" href="fancy/source/jquery.fancybox.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="fancy/lib/jquery.mousewheel.pack.js"></script>
+    <script type="text/javascript" src="fancy/source/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script type="text/javascript" src="js/js.cookie.js"></script>
+    <script type="text/javascript" src="js/reservar.js"></script>
+</head>
+<body>
+<noscript><h3>Tu navegador no admite JavaScript</h3></noscript>
+<header>
+    <h1>Casas Rurales</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="lista.html">Inicio</a></li>
+        <li><a href="#">Casas</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Acerca</a></li>
+    </ul>
+</nav>
+<div id="principal">
+    <main>
+        <section id="contenedorReserva">
+            <article id="seccionReserva">
+                <h2>Cortijo Borbones</h2>
+
+                <div id="imagenesDiv">
+                    <div id="principalImagenes">
+                        <img id="imagen" src="imagenes/exterior1.jpeg" data-zoom-image="imagenes/exterior1.jpeg"></div>
+
+                    <div id="imagenes">
+                        <a class="zoom" href="imagenes/exterior1.jpeg" ><img src="imagenes/exterior1.jpeg"></a>
+                        <a class="zoom" href="imagenes/exterior2.jpeg" ><img src="imagenes/exterior2.jpeg"></a>
+
+                        <a class="zoom" href="imagenes/interior1.jpeg" > <img src="imagenes/interior1.jpeg"></a>
+
+                        <a class="zoom" href="imagenes/interior2.jpeg"> <img src="imagenes/interior2.jpeg"></a>
+
+                    </div>
+                </div>
+                <div id="descripcion">
+                    <p class="subrayar">Dirección: Avd. Montepinar, 123, 1ºB</p>
+
+                    <p class="subrayar">Precio: 35 euros por persona cada noche</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa.
+                        iCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+                        fels, ultricies nec, pellentesque eu, pretium quis, sem.
+                        Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                        arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                        Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
+                        semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
+                        eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+                        viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+                        Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
+                        rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero,
+                        sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
+                        id, lorem. Maecenas nec odio et ante tincidunt tempus.
+                        Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros
+                        faucibus tincidunt.
+                        Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo
+                        eget bibendum sodales, augue velit cursus nunc,</p>
+
+                </div>
+                <form id="formulario" method="post" action="index.html">
+                    <p><label class="label">Nombre </label><input id="nombre" name="nombre" type="text" data-validation="custom" data-validation-regexp="^[A-Z][a-z]{3,}(\s[A-Z][a-z]{2,})*$" data-validation-help="Mínimo de 3 letras" data-validation-error-msg="Nombre no válido" required></p>
+
+                    <p><label class="label">Apellidos </label><input  name="apellidos" type="text" data-validation="custom" data-validation-regexp="^[A-Z][a-z]{3,}(\s[A-Z][a-z]{2,})*$" data-validation-help="Mínimo de 3 letras" data-validation-error-msg="Nombre no válido"  required></p>
+
+                    <p><label class="label">Correo </label><input  name="correo" type="email" data-validation="custom" data-validation-regexp="^(\w+(\.)?[\w]+)+@\w+\.(com|es)$" data-validation-help="Formato válido xxxx@xxxx.com" data-validation-error-msg="Correo no válido"  required></p>
+
+                    <p><label class="label">Teléfono </label><input  name="telefono" type="tel" data-validation="custom" data-validation-regexp="^[679]\d{8}$" data-validation-help="Formato válido: 612345678" data-validation-error-msg="Teléfono no válido" required></p>
+
+                    <p><label class="label">Fecha Entrada </label><input id="from" name="fechaen" type="text" class="datepicker" data-validation="date" data-validation-format="dd/mm/yyyy" data-validation-help="Formato válido dd/mm/yyyy" data-validation-error-msg="La fecha no es válida" required readonly></p>
+
+                    <p><label class="label">Fecha Salida </label><input id="to" name="fechasal" type="text" class="datepicker" data-validation="date" data-validation-format="dd/mm/yyyy" data-validation-help="Formato válido dd/mm/yyyy" data-validation-error-msg="La fecha no es válida" required readonly></p>
+
+                    <p><label class="label">Nº Personas </label><input  name="personas" type="number" min="1" data-validation="custom" data-validation-regexp="^\d{1,}$" data-validation-help="Al menos 1" data-validation-error-msg="Número de personas no válido"  required></p>
+
+                    <p class="centrar"><input type="submit" value="Reservar" class="botonReservar" id="submitReserva"></p>
+                </form>
+
+            </article>
+        </section>
+    </main>
+</div>
+<footer>
+    <div id="copyRight">
+        <h5> (c) 2016 - <span itemprop="colleage">IES Gran Capitán</span> <span itemprop="name"><p>Miguel Ángel Zamora
+            Blanco</p></span>
+        </h5>
+    </div>
+</footer>

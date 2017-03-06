@@ -1,0 +1,309 @@
+@font-face {
+    font-family: animal;
+    src: url("Fonts/AustieBostKittenKlub.ttf");
+}
+
+aside{
+    box-shadow: -3px 0 black;
+    width: 60%;
+    position: absolute;
+    display: none;
+    right: 0;
+    background:linear-gradient(rgba(0, 68, 6, 1), rgba(0, 86, 7, 0.9)) ;
+    padding: 10px;
+    transition: all 1s ease;
+}
+
+aside h2{
+    color: #3a1d12;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    text-shadow: 0px 0px 1px white;
+}
+
+aside ul{
+    list-style: none;
+}
+
+aside ul li{
+    padding: 20px 5px;
+    color: white;
+    border-bottom: 2px solid #3a1d12;
+
+}
+
+aside ul li label{
+    margin-right: 15px;
+}
+
+aside a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    font-size: 14px;
+    background-image: url("../imagenes/madera.jpg");
+    font-family: 'Pacifico', cursive;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#botonFiltro{
+    padding-left: 0;
+}
+
+.botonReservar{
+    background: #5E2F1B;
+    color: white;
+    padding: 4px 15px;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.4em;
+}
+
+.cuerpo{
+    width: 100%;
+}
+
+#filtro{
+    margin-right: 10px;
+    background: rgb(0, 47, 6);
+    border: none;
+    color: white;
+    min-width: 35px;
+    min-height: 30px;
+    border: 2px solid black;
+}
+
+footer{
+    color: white;
+    background: rgba(0, 86, 7, 0.9);
+    min-height: 50px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: -5px 0 5px black;
+    font-family: 'Indie Flower', cursive;
+}
+
+header{
+    font-family: animal;
+    background-image: url("../imagenes/casaRural.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 200px;
+    text-align: center;
+    border: 5px solid rgba(0, 68, 6, 1);
+}
+header h1{
+    margin-top: 10px;
+}
+
+nav{
+    text-align: center;
+    background-color: rgba(0, 68, 6, 1);
+    box-shadow: 0 5px 5px black;
+}
+
+nav>ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row;
+    align-items: stretch;
+    padding: 0;
+    margin: 0;
+}
+
+nav>ul li{
+    padding: 10px 3px;
+    display: flex;
+    flex: 1 0 auto;
+    transition: background-color 1s;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a{
+   text-decoration: none;
+    color: white;
+}
+
+nav> ul li:hover{
+    background-color: rgb(0, 47, 6);
+    transition: background-color 1s;
+}
+
+main{
+    margin: 0 15px;
+    padding-top: 20px;
+}
+
+main section{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    flex: 1 0 0;
+    align-items: baseline;
+    color:white;
+    justify-content: center;
+}
+
+main section article{
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    flex-flow: column;
+    flex: 0 1 95%;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgba(0, 86, 7, 0.9);
+    box-shadow: 3px 5px 5px black;
+    border: 2px solid black;
+    transition: background-color 1s;
+    letter-spacing: 1.5px;
+}
+
+main section article:hover{
+    background-color: rgb(0, 47, 6);
+    transition: background-color 1s;
+}
+
+main section img{
+    width: 100%;
+    border: 2px solid black;
+}
+
+#principal{
+    display: flex;
+    flex-flow: row;
+    flex: 0 0 auto;
+    align-items: stretch;
+}
+
+.quitar{
+    display:none;
+}
+
+#seccionReserva{
+    flex: 1 0 auto;
+}
+
+#seccionReserva form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#seccionReserva p{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    flex: 0 1 49%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+@media screen and (orientation:landscape){
+    header{
+        background-size: cover;
+    }
+}
+
+@media (min-width: 500px) {
+    main section{
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    main section article{
+        flex: 0 1 38%;
+        margin: 10px 10px;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 600px) {
+    body{
+        font-size: 18px;
+    }
+    header {
+        min-height: 400px;
+    }
+}
+
+@media screen and (min-width: 700px){
+
+    .botonReservar{
+        margin-top: 10px;
+    }
+
+    header{
+        min-height: 450px;
+    }
+
+    main section{
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    main section article{
+        flex: 0 1 42%;
+        margin: 10px 10px;
+        padding: 15px;
+    }
+}
+
+
+@media screen and (min-width: 1000px){
+    #botonFiltro{
+        display: none;
+    }
+
+    aside{
+        visibility: visible;
+        width: 14%;
+        display: flex;
+        position: relative;
+        flex-flow: column;
+        flex: 0 1 15%;
+    }
+
+    header{
+        background-size: 100% 100%;
+        min-height: 400px;
+        border: 15px solid rgba(0, 68, 6, 1);
+        border-bottom: 1px solid rgba(0, 68, 6, 1);
+    }
+
+    main section{
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    main section article{
+        flex: 0 1 28%;
+        margin: 40px 10px;
+        padding: 15px;
+    }
+
+    nav{
+        font-size: 1.5em;
+    }
+
+    main {
+        display: flex;
+        flex: 0 1 84%;
+    }
+}
+
+@media (min-width: 1700px) {
+    header{
+        background-size: 100% 100%;
+        min-height: 600px;
+    }
+
+    header h1{
+        font-size: 4em;
+    }
+}
